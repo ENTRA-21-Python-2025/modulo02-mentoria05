@@ -31,12 +31,10 @@ def demonstrar_lista():
     print("\n=== Demonstração de Listas ===")
     print("Uma lista é como uma coleção de itens em ordem")
     
-    # Inicialização da lista vazia
-    # Usamos [] para criar uma lista vazia que será preenchida pelo usuário
+    # numeros: Inicializa uma lista vazia que será usada para armazenar todos os números digitados pelo usuário
+    # Esta lista começa vazia ([]) e será preenchida durante a execução do programa
     numeros = []
     
-    # Loop principal para adicionar números
-    # Continua até que o usuário digite 's' para sair
     print("\nVamos adicionar alguns números à lista:")
     
     while True:
@@ -47,8 +45,9 @@ def demonstrar_lista():
             if numero.lower() == 's':
                 break
                 
-            # Converte a entrada para float e adiciona à lista
-            # float() pode gerar ValueError se a entrada não for um número
+            # Converte a entrada para float e adiciona à lista numeros
+            # numeros.append(): Adiciona o novo número ao final da lista numeros
+            # Cada novo número digitado é convertido para float e adicionado sequencialmente
             numero = float(numero)
             numeros.append(numero)
             print(f"Número {numero} adicionado à lista")
@@ -57,29 +56,28 @@ def demonstrar_lista():
             # Tratamento de erro para entradas inválidas
             print("Por favor, digite um número válido!")
     
-    # Exibição da lista completa
-    # enumerate() retorna pares de (índice, valor) começando de 1
+    # Exibição da lista numeros completa
+    # numeros é iterada usando enumerate para mostrar cada número com seu índice
+    # enumerate(numeros, 1): Gera pares de (índice, valor) começando do 1 para cada elemento em numeros
     print("\nNúmeros na lista:")
     for i, num in enumerate(numeros, 1):
         print(f"{i}. {num}")
     
-    # Cálculos e análise da lista
-    # Verifica se a lista não está vazia antes de fazer cálculos
+    # Cálculos e análise da lista numeros
     if numeros:
-        # Calcula a média usando sum() e len()
-        # sum() soma todos os elementos
-        # len() retorna o número de elementos
+        # numeros é usada para calcular a média:
+        # sum(numeros): Soma todos os elementos da lista
+        # len(numeros): Retorna o tamanho total da lista
         media = sum(numeros) / len(numeros)
         print(f"\nMédia dos números: {media:.2f}")
         
-        # Mostra números maiores que a média
-        # Itera sobre a lista e compara cada número com a média
+        # numeros é iterada novamente para encontrar números maiores que a média
+        # Cada elemento em numeros é comparado com o valor da média
         print("\nNúmeros maiores que a média:")
         for num in numeros:
             if num > media:
                 print(f"- {num}")
     else:
-        # Mensagem para lista vazia
         print("\nNenhum número foi adicionado à lista!")
 
 # Ponto de entrada do programa

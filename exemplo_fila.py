@@ -85,6 +85,7 @@ def demonstrar_fila():
         nome = input("\nDigite o nome da pessoa (ou '0' para sair): ")
         if nome == '0':
             break
+
         # Verifica se o nome não está vazio
         # strip() remove espaços em branco no início e fim
         if nome.strip():
@@ -104,6 +105,5 @@ def demonstrar_fila():
     atender_fila(fila)
 
 # Ponto de entrada do programa
-# Verifica se o arquivo está sendo executado diretamente
 if __name__ == "__main__":
     demonstrar_fila() 
