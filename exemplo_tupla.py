@@ -49,9 +49,9 @@ def demonstrar_tupla():
     try:
         print("\nCriando um novo ponto:")
         # Solicita e converte as coordenadas
-        # float() pode gerar ValueError se a entrada não for um número
-        x = float(input("Digite a coordenada X: "))
-        y = float(input("Digite a coordenada Y: "))
+        # int() pode gerar ValueError se a entrada não for um número
+        x = int(input("Digite a coordenada X: "))
+        y = int(input("Digite a coordenada Y: "))
         # Cria uma nova tupla com as coordenadas
         ponto_d = (x, y)
         print("Novo ponto criado:", ponto_d)

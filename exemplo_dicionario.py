@@ -67,11 +67,16 @@ def demonstrar_dicionario():
         # Tratamento de erro para entradas inválidas
         print("Por favor, digite um número para a idade!")
     
+
+    pessoa["funcao"] = "Programador"
+
+
     # Exibição do dicionário final
     # Mostra os valores atualizados
     print("\nDicionário final:")
     print("Nome:", pessoa["nome"])
     print("Idade:", pessoa["idade"])
+    print("Função:", pessoa["funcao"])
 
 # Ponto de entrada do programa
 # Verifica se o arquivo está sendo executado diretamente
