@@ -56,6 +56,16 @@ def demonstrar_lista():
             # Tratamento de erro para entradas inválidas
             print("Por favor, digite um número válido!")
     
+    # Remove todos os números maiores que 10
+    i = 0
+    while i < len(numeros):
+        if numeros[i] > 10:
+            numeros.remove(numeros[i])
+        else:
+            i += 1
+    
+    print("\nNúmeros maiores que 10 foram removidos da lista.")
+
     # Exibição da lista numeros completa
     # numeros é iterada usando enumerate para mostrar cada número com seu índice
     # enumerate(numeros, 1): Gera pares de (índice, valor) começando do 1 para cada elemento em numeros
